@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam - MCQ</title>
+  <style>
+    body { font-family: Arial; background: #f8f9fc; padding: 30px; }
+    .question { margin: 20px 0; }
+    .options label { display: block; margin: 5px 0; }
+    button { background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h2>Welcome, {{ name }}</h2>
+  <form method="POST">
+    {% for q in questions %}
+      <div class="question">
+        <p><b>{{ loop.index }}. {{ q.question }}</b></p>
+        <div class="options">
+          {% for opt in q.options %}
+            <label><input type="radio" name="q{{ loop.index0 }}" value="{{ opt }}" required> {{ opt }}</label>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    <button type="submit">Submit Exam</button>
+  </form>
+</body>
+</html>
