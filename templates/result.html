@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result - MCQ Exam</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f2f4f7; padding-top: 100px; }
+    .box { background: white; display: inline-block; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    h2 { color: #333; }
+    a { text-decoration: none; color: #4CAF50; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Result for {{ name }}</h2>
+    <p>✅ Your Score: <b>{{ score }}</b> / {{ total }}</p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</body>
+</html>

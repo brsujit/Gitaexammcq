@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - MCQ Exam</title>
+  <style>
+    body { font-family: Arial; background: #eef2f7; text-align: center; margin-top: 100px; }
+    .box { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px #ccc; }
+    input { padding: 10px; margin: 10px; width: 200px; }
+    button { padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>MCQ Examination Login</h2>
+    <form method="POST">
+      <input type="text" name="name" placeholder="Enter your name" required><br>
+      <input type="password" name="password" placeholder="Exam Password" required><br>
+      <button type="submit">Start Exam</button>
+    </form>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+  </div>
+</body>
+</html>
